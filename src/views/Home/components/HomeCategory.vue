@@ -40,16 +40,18 @@ const categoryStore = useCategoryStore();
 <style lang="scss" scoped>
 .home-category {
   width: 220px;
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.8);
   padding: 10px 0;
-  border-radius: 8px 0 0 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10; // 提高层级确保覆盖轮播图
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   list-style: none;
+  height: 410px;
   padding: 0;
   margin: 0;
   
@@ -67,7 +69,6 @@ const categoryStore = useCategoryStore();
       padding: 14px 20px;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 2px;
       align-items: center;
     }
     

@@ -37,6 +37,7 @@ img{
 }
 
 .container {
+position: relative;
   width: 100%;
   max-width: 1200px; /* 可根据设计需求调整最大宽度 */
   margin: 0 auto; /* 水平居中 */
