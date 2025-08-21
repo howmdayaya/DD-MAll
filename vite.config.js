@@ -13,8 +13,10 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    // 自动导入
     AutoImport({
       resolvers: [ElementPlusResolver()],
+      imports: ['vue', 'vue-router','pinia'],
     }),
     Components({
       resolvers: [ElementPlusResolver()],
