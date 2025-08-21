@@ -23,7 +23,7 @@ onMounted(()=>{
 
 <style lang="scss" scoped>
 .home-banner {
-  width: 1240px;
+  width: 1224px;
   height: 500px;
   margin: 0 auto;// 负边距上移实现覆盖效果
   padding: 0 20px;

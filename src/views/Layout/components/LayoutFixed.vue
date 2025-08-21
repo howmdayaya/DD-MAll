@@ -143,33 +143,4 @@ $hover-transition: all 0.3s ease;
   }
 }
 
-// 响应式调整
-@media (max-width: 768px) {
-  .app-header-sticky {
-    .container {
-      height: 50px;
-    }
-
-    .logo {
-      width: 60px;
-    }
-
-    .app-header-nav {
-      li {
-        margin: 0 10px;
-
-        a {
-          font-size: 14px;
-        }
-      }
-    }
-
-    .right {
-      gap: 15px;
-      a {
-        font-size: 13px;
-      }
-    }
-  }
-}
 </style>

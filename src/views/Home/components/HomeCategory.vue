@@ -228,7 +228,6 @@ const categoryStore = useCategoryStore();
   }
 }
 
-// 响应式优化
 @media (max-width: 1200px) {
   .menu .menu-item .layer {
     width: 650px;
@@ -263,31 +262,7 @@ const categoryStore = useCategoryStore();
   }
 }
 
-@media (max-width: 768px) {
-  .menu .menu-item {
-    flex: 1 0 50%;
-  }
-  
-  .product-item {
-    width: 33.333% !important;
-  }
-}
 
-@media (max-width: 576px) {
-  .menu .menu-item {
-    flex: 1 0 100%;
-  }
-  
-  .product-item {
-    width: 50% !important;
-  }
-  
-  .menu .menu-item .menu-links {
-    padding: 12px 15px;
-  }
-}
-
-// 通用省略号样式
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;

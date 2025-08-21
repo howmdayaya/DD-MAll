@@ -66,38 +66,4 @@
     }
   }
 }
-// .app-topnav {
-//   background-color: #333;
-//   ul {
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     height: 53px;
-//     li {
-//       a {
-//         padding: 0 15px;
-//         color: #cdcdcd;
-//         line-height: 1;
-//         display: inline-block;
-
-//         i {
-//           font-size:14px;
-//           margin-right: 2px;
-//         }
-
-//         &:hover {
-//           color:aqua
-//         }
-
-//         ~li {
-//           a {
-//             border-left: 2px solid #666;
-//           }
-//         }
-//       }
-//     }
-
-//   }
-// }
-
 </style>
