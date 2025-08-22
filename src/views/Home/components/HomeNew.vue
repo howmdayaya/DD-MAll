@@ -1,6 +1,6 @@
 <script setup>
 import HomePanel from './HomePanel.vue'
-import { getNewAPI } from '@/apis/layout'
+import { getNewAPI } from '@/apis/home'
 import { ref, onMounted } from 'vue'
 
 const newList = ref([])

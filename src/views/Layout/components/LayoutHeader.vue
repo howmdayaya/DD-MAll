@@ -22,7 +22,7 @@
             </router-link>
           </li>
           <li v-for="item in categoryStore.categoryList" :key="item.id">
-            <router-link to="/">
+            <router-link active-class="active" :to="`/category/${item.id}`">
               {{ item.name }}
             </router-link>
           </li>

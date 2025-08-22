@@ -1,5 +1,5 @@
 <script setup>
-  import { getGoodsAPI } from '@/apis/layout'
+  import { getGoodsAPI } from '@/apis/home'
   import HomePanel from '@/views/Home/components/HomePanel.vue'
   import GoodsItem from '@/views/Home/components/GoodsItem.vue'
 
