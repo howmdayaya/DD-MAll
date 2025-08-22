@@ -67,6 +67,7 @@
         width: 100%;
         text-indent: -9999px;
         background: url('@/assets/images/logo.jpg') no-repeat center center / contain;
+
       }
     }
 

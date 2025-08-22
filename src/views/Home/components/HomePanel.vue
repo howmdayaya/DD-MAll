@@ -29,7 +29,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .home-panel {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   padding-top: 20px;
 
   h3 {

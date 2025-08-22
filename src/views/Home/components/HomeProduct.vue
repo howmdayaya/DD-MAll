@@ -42,15 +42,82 @@
 
 <style lang="scss" scoped>
 .home-product {
-  width: 1224px;
+  width: 100%;
   margin: 0 auto;
-  // background-color: aqua;
-}
-
-
-.ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  .box {
+    display: flex;
+    margin-top: 20px;
+    gap: 40px;
+    .cover {
+      height: 540px;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0; 
+      // background-color: aliceblue;
+      img {
+        width: 250px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 70%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        padding: 10px;
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .goods-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        width: 200px;
+        text-align: center;
+        .goods-item {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          padding: 15px;
+          box-sizing: border-box;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+          .name {
+            color: #333;
+            font-size: 14px;
+            font-weight: 800;
+          }
+          .desc {
+            color: #7a7a7a;
+            font-size: 12px;
+            height: 28px;
+          }
+          .price {
+            color: #ff4444;
+            font-size: 18px;
+          }
+        }
+        .ellipsis {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%; // 确保文本容器宽度100%
+        }
+      }
+    }
+  }
 }
 </style>
