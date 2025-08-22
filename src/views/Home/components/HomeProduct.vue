@@ -1,7 +1,8 @@
 <script setup>
   import { getGoodsAPI } from '@/apis/layout'
-  import { ref, onMounted } from 'vue'
   import HomePanel from '@/views/Home/components/HomePanel.vue'
+  import GoodsItem from '@/views/Home/components/GoodsItem.vue'
+
 
   const goodsProduct = ref([])
   const getGoodsList = async () => {
@@ -21,18 +22,13 @@
         <router-link class="cover" to="/">
           <img v-img-lazy="cate.picture" :src="cate.picture" alt="">
           <strong class="label">
-            <span>{{ cate.name }}馆</span>
-            <span>{{ cate.saleInfo }}</span>
+            <span>{{ cate.name }}馆 &gt;</span>
+            <span>&nbsp;{{ cate.saleInfo }}</span>
           </strong>
         </router-link>
         <ul class="goods-list">
           <li v-for="good in cate.goods" :key="good.id">
-            <router-link class="goods-item" to="/">
-              <img :src="good.picture" alt="">
-              <p class="name ellipsis">{{ good.name }}</p>
-              <p class="desc ellipsis">{{ good.desc }}</p>
-              <p class="price">&yen;{{ good.price }}</p>
-            </router-link>
+            <GoodsItem :good="good" />
           </li>
         </ul>
       </div>
@@ -46,8 +42,8 @@
   margin: 0 auto;
   .box {
     display: flex;
-    margin-top: 20px;
     gap: 40px;
+    padding: 20px 0;
     .cover {
       height: 540px;
       border-radius: 8px;
@@ -59,6 +55,8 @@
         width: 250px;
         height: 100%;
         object-fit: cover;
+        transition: all 0.5s ease;
+
       }
       .label {
         position: absolute;
@@ -66,7 +64,7 @@
         left: 0;
         transform: translateY(-50%);
         width: 70%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
         color: #fff;
         font-size: 14px;
         font-weight: 800;
@@ -75,6 +73,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.5s ease;
+
+      }
+      &:hover {
+        .label {
+          transform: translateY(150%);
+          transition: all 0.5s ease-in-out;
+        }
+        img {
+          transform: scale(1.1);
+          transition: all 0.5s ease-in-out;
+        }
       }
     }
     .goods-list {
@@ -84,38 +94,6 @@
       li {
         width: 200px;
         text-align: center;
-        .goods-item {
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          padding: 15px;
-          box-sizing: border-box;
-          transition: all 0.3s ease;
-          &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-          }
-          .name {
-            color: #333;
-            font-size: 14px;
-            font-weight: 800;
-          }
-          .desc {
-            color: #7a7a7a;
-            font-size: 12px;
-            height: 28px;
-          }
-          .price {
-            color: #ff4444;
-            font-size: 18px;
-          }
-        }
-        .ellipsis {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          width: 100%; // 确保文本容器宽度100%
-        }
       }
     }
   }
