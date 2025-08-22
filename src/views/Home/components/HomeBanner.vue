@@ -1,6 +1,6 @@
 <script setup>
 import { getBannerAPI } from '@/apis/layout'
-import { onMounted } from 'vue'
+import { onMounted,ref } from 'vue'
 
 const bannerList = ref([])
 const getBanner = async () => {
@@ -15,7 +15,7 @@ onMounted(()=>{
   <div class="home-banner">
     <el-carousel height="430px">
       <el-carousel-item v-for="item in bannerList" :key="item.id">
-        <img :src="item.imgUrl" alt="" />
+        <img v-img-lazy="item.imgUrl" :src="item.imgUrl" alt="" />
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -26,7 +26,6 @@ onMounted(()=>{
   width: 1224px;
   height: 500px;
   margin: 0 auto;// 负边距上移实现覆盖效果
-  padding: 0 20px;
   position: absolute;
   top: 0;
   left: 0;

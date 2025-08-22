@@ -22,11 +22,11 @@ const categoryStore = useCategoryStore();
           <ul class="product-list">
             <li v-for="i in item.goods" :key="i.id" class="product-item">
               <router-link to="/" class="product-link">
-                <img :src="i.picture" :alt="i.name" />
+                <img v-img-lazy="i.picture" :src="i.picture" :alt="i.name" />
                 <div class="info">
                   <p class="name ellipsis-2">{{ i.name }}</p>
                   <p class="desc ellipsis">{{ i.desc }}</p>
-                  <p class="price"><i>￥</i>{{ i.price }}</p>
+                  <p class="price"><i>&yen;</i>{{ i.price }}</p>
                 </div>
               </router-link>
             </li>

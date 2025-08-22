@@ -6,11 +6,21 @@
   import HomeProduct from '@/views/Home/components/HomeProduct.vue'
 </script>
 <template>
-  <div class="container">
-    <HomeCategory />
-    <HomeBanner />
+  <div class="bg">
+    <div class="container">
+      <HomeCategory />
+      <HomeBanner />
+    </div>
+    <HomeNew />
+    <HomeHot />
+    <HomeProduct />
   </div>
-  <HomeNew />
-  <HomeHot />
-  <HomeProduct />
 </template>
+
+<style scoped lang="scss">
+.bg {
+  width: 100%;
+  background-color: #cfcfcf;
+
+}
+</style>

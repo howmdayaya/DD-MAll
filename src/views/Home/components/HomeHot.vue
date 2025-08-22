@@ -1,6 +1,9 @@
 <script setup>
 import HomePanel from './HomePanel.vue'
 import { getHotAPI } from '@/apis/layout'
+import { ref, onMounted } from 'vue'
+
+
 const hotList = ref([])
 const getHotList = async () => {
   const res = await getHotAPI()
@@ -21,7 +24,7 @@ onMounted(()=>{
         </router-link>
       </li>
     </ul>
-  </HomePanel>/>
+  </HomePanel>
 </template>
 <style lang="scss" scoped>
 .goods-list {

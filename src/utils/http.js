@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const http = axios.create({
-  baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
+  // baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
+  baseURL:'http://localhost:9000',
   timeout: 5000
 })
 

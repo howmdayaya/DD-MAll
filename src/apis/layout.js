@@ -19,3 +19,9 @@ export const getNewAPI = () => {
 export const getHotAPI = () => {
   return http.get('home/hot')
 }
+
+// 获取产品列表数据
+export const getGoodsAPI = () => {
+  return http.get('home/goods')
+}
+
